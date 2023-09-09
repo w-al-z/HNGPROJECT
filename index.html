@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="zuri.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  <script src="zuri.js"></script>
+  </head>
+  <body>
+    <div class="card">
+      <img
+        src="/projectzuri/img/walz.jpg.jpg "
+        alt="walz"
+        data-testid="slackDisplayImage"
+        style="width: 100%"
+      />
+      <h1 data-testid="slackUserName">Awwal Abdullahi</h1>
+      <p data-testid="myTrack" class="myTrack">Frontend Developer</p>
+
+      <div class="flexbox">
+        <p currentDayOfTheWeek class="date"></p>
+        <p data-testid="currentUTCTime" class="time"></p>
+        <script>
+        const date = document.getElementsByClassName("date");
+        date[0].innerHTML = " Day: " + weekday + "</h3>";
+    </script>
+    <script>
+        const time = document.getElementsByClassName("time");
+        time[0].innerHTML = "Time: " + currentTimeMillis + "</h3>";
+    </script>
+      </div>
+      
+      <a  data-testid=“githubURL”
+ href="https://github.com/w-al-z" style="font-size: 24px" class="fa">&#xf09b;
+    </div>
+  </body>
+</html>
