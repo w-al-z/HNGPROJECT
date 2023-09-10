@@ -1,43 +1,63 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link href="zuri.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  <script src="zuri.js"></script>
-  </head>
-  <body>
-    <div class="card">
-      <img
-        src="./img/walz.jpg"
-        alt="walz"
-        data-testid="slackDisplayImage"
-        style="width: 100%"
-      />
-      <h1 data-testid="slackUserName">Awwal Abdullahi</h1>
-      <p data-testid="myTrack" class="myTrack">Frontend Developer</p>
+    <link rel="stylesheet" href="zuri.css" />
 
-      <div class="flexbox">
-        <p currentDayOfTheWeek class="date"></p>
-        <p data-testid="currentUTCTime" class="time"></p>
-        <script>
-        const date = document.getElementsByClassName("date");
-        date[0].innerHTML = " Day: " + weekday + "</h3>";
-    </script>
-    <script>
-        const time = document.getElementsByClassName("time");
-        time[0].innerHTML = "Time: " + currentTimeMillis + "</h3>";
-    </script>
+    <title>HNG</title>
+    <script src="zuri.js"></script>
+  </head>
+
+  <body>
+    <div class="body">
+      <div class="nav">
+        <div class="profilepic">
+          <img
+            data-testId="slackDisplayImage"
+            class="profile-pic"
+            src="/projectzuri/img/walz.jpg"
+            alt="Malik"
+          />
+        </div>
+        <div class="profie-details">
+          <div class="slack-name">
+            <h1>Awwal Abdullahi</h1>
+          </div>
+          <div class="track">
+            <h2 data-testId="myTrack">Track: Frontend</h2>
+          </div>
+        </div>
+        <div class="github-link">
+          <a data-testId="githubURL" href="https://github.com/w-al-z"
+            ><img src="/projectzuri/img/github.svg" width="60" height="60"
+          /></a>
+        </div>
       </div>
-      
-      <a  data-testid=“githubURL”
- href="https://github.com/w-al-z" style="font-size: 24px" class="fa">&#xf09b;
+
+      <div class="task">
+        <body  data-testId="currentUTCTime" onLoad={initClock()}>
+          <h3>Current UTC time in milliseconds:</h3>
+          <div id="timedate">
+            
+            <a id="mon">Time</a>:
+            <a id="d">1</a>:
+            <a id="y">0</a>:<br />
+            <a id="h">12</a> 
+            <a id="m">00</a>
+            <a id="s">00</a>
+            <a id="mi">000</a>
+          </div>
+        <div data-testId="currentDayOfTheWeek" class="date"></div>
+      </div>
     </div>
+
+
+
+    <script>
+      const date = document.getElementsByClassName("date");
+      date[0].innerHTML = "<h3>Current day of the week: " + weekday + "</h3>";
+    </script>
   </body>
 </html>
